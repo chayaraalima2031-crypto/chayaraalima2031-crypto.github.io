@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — PawPaw House</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="paw">🐾</span> PawPaw House</a>
+      <nav class="menu">
+        <a href="index.html#shop">Kembali ke Shop</a>
+      </nav>
+      <div class="actions">
+        <a class="btn ghost small" href="index.html">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container checkout">
+    <h1>Checkout</h1>
+    <div class="checkout-grid">
+      <section>
+        <h2>Ringkasan Pesanan</h2>
+        <div id="summary"></div>
+        <div class="subtotal">Subtotal: <strong id="summarySubtotal">Rp0</strong></div>
+      </section>
+      <section>
+        <h2>Data Pemesan</h2>
+        <form id="checkoutForm">
+          <div class="row">
+            <input required name="name" placeholder="Nama lengkap" />
+            <input required type="email" name="email" placeholder="Email" />
+          </div>
+          <input required name="phone" placeholder="No. HP/WA" />
+          <input required name="address" placeholder="Alamat lengkap" />
+          <div class="row">
+            <input required name="city" placeholder="Kota/Kabupaten" />
+            <input required name="zip" placeholder="Kode Pos" />
+          </div>
+          <label class="radio"><input type="radio" name="payment" value="COD" checked /> Bayar di tempat (COD)</label>
+          <label class="radio"><input type="radio" name="payment" value="Transfer" /> Transfer (simulasi)</label>
+          <button class="btn primary block" type="submit">Buat Pesanan</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> PawPaw House</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terima kasih — PawPaw House</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container thanks">
+    <div class="card">
+      <h1>Terima kasih! 🎉</h1>
+      <p>Pesanan Anda berhasil dibuat.</p>
+      <p>ID Pesanan: <strong id="orderId"></strong></p>
+      <a class="btn primary" href="index.html">Kembali ke Home</a>
+    </div>
+  </main>
+  <script>
+    const id = new URLSearchParams(location.search).get('order') || Math.random().toString(36).slice(2,8).toUpperCase();
+    document.getElementById('orderId').textContent = id;
+  </script>
+</body>
+</html>
